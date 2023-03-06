@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    font-family: Hanken Grotesk;
+    background-color: aliceblue;
+}
+
+.card {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    width: 548px;
+    height: 370px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 4px 5px 15px -13px black;
+}
+
+.result-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background: rgb(120,87,255);
+    background: linear-gradient(180deg, rgba(120,87,255,1) -50%, rgba(46,43,233,1) 100%);
+    border-radius: 20px;
+}
+
+.result-side h2 {
+    color: hsla(0, 0%, 100% , 0.5);
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(0deg, hsla(241, 72%, 46%, 0) 0%, hsla(256, 72%, 46%, 1) 100%);
+    margin-bottom: 30px;
+}
+
+.result-num {
+    font-size: 45px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.of-100 {
+    color: hsla(0 , 0% , 100% , 0.3);
+    font-size: 13px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.great {
+    color: #fff;
+    font-size: 23px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.score p {
+    width: 70%;
+    text-align: center;
+    font-size: 14px;
+    color: hsla(0, 0%, 100% , 0.5); 
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.summary-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;    
+}
+
+.summary-side h2 {
+    color: hsl(224, 30%, 27%);
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.summary-results {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.summary-side .summary-results .line {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.summary-side .summary-results .line .out-of-100 {
+    color: hsla(224, 30%, 27% , 0.5);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.summary-side .summary-results .line .out-of-100 span {
+    color: hsl(224, 30%, 27%);
+}
+
+.summary-side .summary-results .line .line-head {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+}
+
+.summary-side .summary-results .line .line-head svg {
+    transform: scale(0.8);
+}
+
+.summary-side .summary-results .line:first-of-type .line-head {
+    color: hsl(0, 100%, 67%);
+}
+
+
+.summary-side .summary-results .line:first-of-type {
+    background-color: hsla(0, 100%, 67% , .06);
+}
+
+.summary-side .summary-results .line:nth-of-type(2) .line-head {
+    color: hsl(39, 100%, 56%);
+}
+
+
+.summary-side .summary-results .line:nth-of-type(2) {
+    background-color: hsla(39, 100%, 56% , 0.06);
+}
+
+.summary-side .summary-results .line:nth-of-type(3) .line-head {
+    color: hsl(166, 100%, 37%);
+}
+
+
+.summary-side .summary-results .line:nth-of-type(3) {
+    background-color: hsla(166, 100%, 37% , 0.06);
+}
+
+.summary-side .summary-results .line:last-of-type .line-head {
+    color: hsl(234, 85%, 45%);
+}
+
+
+.summary-side .summary-results .line:last-of-type {
+    background-color: hsla(234, 85%, 45% , 0.06);
+}
+
+.summary-side .summary-results button {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    background-color: hsl(224, 30%, 27%);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.summary-side .summary-results button:hover {
+    background: linear-gradient(180deg, rgba(120,87,255,1) -50%, rgba(46,43,233,1) 100%);;
+}
+
+@media (max-width: 767px) {
+    .card {
+        min-height: 100vh;
+        flex-direction: column;
+        width: 100%;
+        box-shadow: none;
+    }   
+    .result-side {
+        width: 100%;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+    .result-side h2 {
+        font-size: 16px;
+        padding-top: 20px;
+    }
+    .result-side p {
+        width: 60%;
+        padding-bottom: 25px;
+    }
+    .summary-side {
+        width: 100%;
+        padding: 30px 30px 10px;
+    }
+    .summary-side .summary-results .line {
+        padding: 15px;
+    }
+    .summary-side .summary-results button {
+        margin-top: 10px;
+        font-size: 17px;
+    }
+}
